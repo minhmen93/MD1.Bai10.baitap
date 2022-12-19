@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas {
+            margin-right: auto;
+            margin-left: auto;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="700px" height="300px" style="border:solid 1px red;"></canvas>
+<script>
+    class Circle {
+        x;
+        y;
+        radius;
+
+        constructor(x, y, radius) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+        }
+
+        drawCircle(ctx,color) {
+            ctx.beginPath();
+            ctx.fillStyle =color
+            ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+            ctx.closePath();
+            ctx.fill();
+        }
+
+        randomColor() {
+            return `rgb(${Math.random()*255},${Math.random()*255},${Math.random()*255})`
+        }
+    }
+    setInterval(function () {
+        let ctx = document.getElementById('myCanvas').getContext('2d')
+        for (let i = 0; i < 200; i++) {
+            let circle = new Circle(Math.random()*700,Math.random()*300,Math.random()*50+1)
+            circle.drawCircle(ctx,circle.randomColor());
+        }
+    },1000)
+
+
+
+
+</script>
+</body>
+</html>

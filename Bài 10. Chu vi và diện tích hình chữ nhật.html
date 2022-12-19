@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="hinhChuNhat()"> Kết quả </button>
+<canvas id="myCanvas" width="800px" height="300px" style="border: solid 1px blue";></canvas>
+
+<script>
+    class Rect {
+    width;
+    height;
+
+    constructor(width, height) {
+        this.width = width;
+        this.height = height;
+
+    }
+
+    drawRect(ctx) {
+        ctx.beginPath();
+        ctx.fillStyle = "red";
+        ctx.fillRect(50, 30, this.width, this.height);
+        ctx.closePath();
+
+    }
+    getArea (){
+        return this.width * this.height;
+    }
+    getPerimeter (){
+        return ( this.width + this.height)*2;
+    }
+}
+function hinhChuNhat(){
+    let c = document.getElementById("myCanvas");
+    let ctx = c.getContext("2d");
+    let rect = new Rect(200,100)
+    rect.drawRect(ctx)
+    alert(' chu vi : ' + rect.getArea() + " ; diện tích :  " + rect.getPerimeter() )
+
+}
+
+
+</script>
+</body>
+</html>

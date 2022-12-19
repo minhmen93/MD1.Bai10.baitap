@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="c">
+<button type="button" onclick="chuyenDoi()">Chuyển đổi</button>
+<script>
+    class Temperature {
+        c;
+
+        constructor(c) {
+            this.c = c;
+        }
+
+        translateToF() {
+            return 9 / 5 * this.c + 32;
+        }
+
+        translateToK() {
+            return this.c + 273.15;
+        }
+    }
+
+    function chuyenDoi() {
+        let c = +document.getElementById("c").value;
+        let tem = new Temperature(c);
+        alert(" Độ F là " + tem.translateToF() + "; Độ K là : " + tem.translateToK());
+    }
+
+</script>
+</body>
+</html>

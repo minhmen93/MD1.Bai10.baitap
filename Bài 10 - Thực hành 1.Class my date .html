@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+class MyDate {
+  day;
+  month;
+  year;
+  constructor (day,month,year){
+  this.day = day;
+  this.month = month;
+  this.year = year;
+
+
+}
+getDay(){
+  return this.day;
+}
+setDay(){
+  this.day= day;
+}
+getMonth (){
+  return this.month;
+}
+setMonth(){
+  this.month=month;
+}
+getYear(){
+  return this.year;
+}
+setYear(){
+  this.year=year;
+}
+toString (){
+    return this.day + "/" + this.month + "/" + this.year;
+}
+}
+let date1 = new Mydate(day : 19, month : 12, year : 2022);
+
+
+</script>
+</body>
+</html>

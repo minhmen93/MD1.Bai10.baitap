@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas {
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="800px" height="300px" style="border: solid 1px black;"></canvas>
+<script>
+    let C = document.getElementById("myCanvas");
+    let ctx = C.getContext("2d");
+    ctx.strokeStyle = 'black';
+    ctx.beginPath();
+    ctx.rect(0, 0, 100, 30);
+    ctx.stroke();
+    ctx.closePath();
+    ctx.beginPath();
+    ctx.arc(50, 50, 20, 0, 2 * Math.PI);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.rect(150, 0, 100, 30);
+    ctx.stroke();
+    ctx.closePath();
+    ctx.beginPath();
+    ctx.arc(200, 50, 20, 0, 2 * Math.PI);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.rect(300, 0, 100, 30);
+    ctx.stroke();
+    ctx.closePath();
+    ctx.beginPath();
+    ctx.arc(350, 50, 20, 0, 2 * Math.PI);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(50, 250, 20, 0, 2 * Math.PI);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.rect(0, 270, 100, 30);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(200, 250, 20, 0, 2 * Math.PI);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.rect(150, 270, 100, 30);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(350, 250, 20, 0, 2 * Math.PI);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.rect(300, 270, 100, 30);
+    ctx.stroke();
+
+</script>
+
+</body>
+</html>
